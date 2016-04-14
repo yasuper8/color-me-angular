@@ -1,5 +1,5 @@
 <div ng-controller="ColorsShowController as colorCtrl">
-  <span style="color:#{{colorCtrl.calculateInverse()}};">
+  <span class="foreground">
     {{colorCtrl.color.name}}
   </span>
 
@@ -9,6 +9,13 @@
   <style>
     .background {
       background-color: #{{colorCtrl.color.hex}};
+    }
+    span {
+      color: #{{colorCtrl.color.hex}};
+    }
+    .foreground {
+      filter: invert(100%);
+      -webkit-filter: invert(100%);
     }
   </style>
 </div>
