@@ -5,19 +5,25 @@ angular
   .config(config);
 
 config.$inject = ["$routeProvider", "$locationProvider"];
-function config($routeProvider, $locationProvider) {
+function config(   $routeProvider,   $locationProvider  ) {
+  // Setup Routes
   $routeProvider
     .when('/', {
-      templateUrl: '/templates/colors/index.html'
+      templateUrl: '/templates/colors/index.html',
+      controller: 'ColorsIndexController',
+      controllerAs: 'colorsCtrl'
     })
-    .when('/:hex', {
-      templateUrl: '/templates/colors/show.html'
+    .when('/colors/:index', {
+      templateUrl: '/templates/colors/show.html',
+      controller: 'ColorsShowController',
+      controllerAs: 'colorCtrl'
     })
 
-    $locationProvider.html5Mode({
-      enabled: true,
-      requireBase: false
-    });
+  // using html5Mode means we don't have /#/colors in our URL
+  $locationProvider.html5Mode({
+    enabled: true,
+    requireBase: false
+  });
 }
 
 ColorsIndexController.$inject = [];
@@ -26,13 +32,12 @@ function ColorsIndexController(){
 }
 
 ColorsShowController.$inject = ["$routeParams"];
-function ColorsShowController($routeParams){
-  this.colors = COLORS;
+function ColorsShowController(   $routeParams   ){
+  var vm = this;
 
-  var hex = $routeParams.hex;
-  this.color = this.colors.find(function(c){
-    return c.hex === hex;
-  })
+  console.log('$routeParams.index is', $routeParams.index);
+
+  vm.color = COLORS[33];
 }
 
 
@@ -206,4 +211,4 @@ var COLORS = [
     {name: "LightYellow", hex: "FFFFE0"},
     {name: "Ivory", hex: "FFFFF0"},
     {name: "White", hex: "FFFFFF"}
-]
+];
