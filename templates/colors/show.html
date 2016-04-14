@@ -1,5 +1,5 @@
 <div ng-controller="ColorsShowController as colorCtrl">
-  <h1 style="color:#{{colorCtrl.color.hex}};">
+  <h1 ng-style="{color: '#' + colorCtrl.color.hex}">
     {{colorCtrl.color.name}}
   </h1>
 
