@@ -12,7 +12,7 @@ function config($routeProvider, $locationProvider) {
     })
     .when('/:hex', {
       templateUrl: '/templates/colors/show.html'
-    })
+    });
 
     $locationProvider.html5Mode({
       enabled: true,
@@ -20,7 +20,7 @@ function config($routeProvider, $locationProvider) {
     });
 }
 
-ColorsShowController.$inject = [];
+ColorsIndexController.$inject = [];
 function ColorsIndexController(){
   this.colors = COLORS;
 }
@@ -32,7 +32,9 @@ function ColorsShowController($routeParams){
   var hex = $routeParams.hex;
   this.color = this.colors.find(function(c){
     return c.hex === hex;
-  })
+  });
+
+
 }
 
 
@@ -206,4 +208,4 @@ var COLORS = [
     {name: "LightYellow", hex: "FFFFE0"},
     {name: "Ivory", hex: "FFFFF0"},
     {name: "White", hex: "FFFFFF"}
-]
+];

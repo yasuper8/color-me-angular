@@ -1,7 +1,14 @@
 <div ng-controller="ColorsShowController as colorCtrl">
-  <span style="color:#{{colorCtrl.color.hex}};">
+  <span style="color:#{{colorCtrl.calculateInverse()}};">
     {{colorCtrl.color.name}}
   </span>
 
   <a href="/">Back</a>
+
+  <!-- Normally we wouldn't use an inline stylesheet, but this is fun and a bit of a hack to let this template affect the whole page -->
+  <style>
+    .background {
+      background-color: #{{colorCtrl.color.hex}};
+    }
+  </style>
 </div>
