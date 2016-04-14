@@ -1,5 +1,5 @@
 <div ng-controller="ColorsIndexController as colorsCtrl">
-  <span ng-repeat="color in colorsCtrl.colors" style="color:#{{color.hex}};">
+  <a ng-repeat="color in colorsCtrl.colors" style="color:#{{color.hex}};" ng-href="/{{color.hex}}">
     {{color.name}}
-  </span>
+  </a>
 </div>

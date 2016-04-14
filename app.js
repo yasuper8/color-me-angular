@@ -1,6 +1,7 @@
 angular
   .module("colorMeApp", ["ngRoute"])
   .controller("ColorsIndexController", ColorsIndexController)
+  .controller("ColorsShowController", ColorsShowController)
   .config(config);
 
 config.$inject = ["$routeProvider", "$locationProvider"];
@@ -8,6 +9,9 @@ function config($routeProvider, $locationProvider) {
   $routeProvider
     .when('/', {
       templateUrl: '/templates/colors/index.html'
+    })
+    .when('/:hex', {
+      templateUrl: '/templates/colors/show.html'
     })
 
     $locationProvider.html5Mode({
@@ -19,6 +23,16 @@ function config($routeProvider, $locationProvider) {
 ColorsIndexController.$inject = [];
 function ColorsIndexController(){
   this.colors = COLORS;
+}
+
+ColorsShowController.$inject = ["$routeParams"];
+function ColorsShowController($routeParams){
+  this.colors = COLORS;
+
+  var hex = $routeParams.hex;
+  this.color = this.colors.find(function(c){
+    return c.hex === hex;
+  })
 }
 
 
