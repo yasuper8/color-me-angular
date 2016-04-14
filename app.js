@@ -1,8 +1,23 @@
 angular
-  .module("colorMeApp", [])
-  .controller("ColorIndexController", ColorIndexController)
+  .module("colorMeApp", ["ngRoute"])
+  .controller("ColorsIndexController", ColorsIndexController)
+  .config(config);
 
-function ColorIndexController(){
+config.$inject = ["$routeProvider", "$locationProvider"];
+function config($routeProvider, $locationProvider) {
+  $routeProvider
+    .when('/', {
+      templateUrl: '/templates/colors/index.html'
+    })
+
+    $locationProvider.html5Mode({
+      enabled: true,
+      requireBase: false
+    });
+}
+
+ColorsIndexController.$inject = [];
+function ColorsIndexController(){
   this.colors = COLORS;
 }
 

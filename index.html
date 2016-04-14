@@ -3,16 +3,13 @@
 <head>
   <title>Color Me Angular</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
-  <script src="app.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular-route.min.js"></script>
+  <script src="/app.js"></script>
 </head>
 <body>
 
-  <div ng-controller="ColorIndexController as colorCtrl">
-    <span ng-repeat="color in colorCtrl.colors" style="color:#{{color.hex}};">
-      {{color.name}}
-    </span>
-  </div>
+  <div ng-view></div>
 
 </body>
 </html>
