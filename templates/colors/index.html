@@ -1,5 +1,8 @@
 <div ng-controller="ColorsIndexController as colorsCtrl">
-  <a ng-repeat="color in colorsCtrl.colors" style="color:#{{color.hex}};" ng-href="/{{color.hex}}">
+  <a  ng-repeat="color in colorsCtrl.colors"
+      class="btn btn-default col-xs-12 col-sm-4 col-md-3"
+      style="background-color:#{{color.hex}};"
+      ng-href="/{{color.hex}}">
     {{color.name}}
   </a>
 </div>
