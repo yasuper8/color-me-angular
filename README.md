@@ -3,6 +3,8 @@ Learn ngRoute with colors.
 
 This lab uses [148 Built-In CSS Color Names](https://gist.github.com/nathanallen/22dbc2c0dbe1b6d2d197721ec9eeab61#file-color_names-json).
 
+> <img width="400" alt="screenshot of colors/index buttons" src="https://cloud.githubusercontent.com/assets/1489337/14548062/6a58ba58-0268-11e6-8556-ac822ab64dae.png">
+
 ## The Challenge
 Your goal is to create an angular front-end that displays information about css colors:
 
@@ -10,6 +12,8 @@ Your goal is to create an angular front-end that displays information about css 
 * When a user navigates to `/colors/33`, they should see information about hexadecimal color `#6495ED`, otherwise known as "CornFlowerBlue" (see the hard-coded list of `COLORS` in `app.js`).
 * Color names should link to their approriate `show` page.
 * The `colors/show.html` should have a convenient "Back" button that returns the user to the home page.
+
+> <img width="200" alt="screenshot of colors#show" src="https://cloud.githubusercontent.com/assets/1489337/14548061/68072488-0268-11e6-8b50-1dc36103144a.png">
 
 ## Setup
 Clone this repo.
