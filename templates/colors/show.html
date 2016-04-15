@@ -1,10 +1,7 @@
-<h1>Show</h1>
-<p>You are viewing colors/show.html</p>
-<p>Your goal is to:</p>
+<h1>{{colorCtrl.color.name}}</h1>
+<ul>
+  <li>Hex: #{{colorCtrl.color.hex}}</li>
+  <li>Color: <input type="color" ng-value="'#'+colorCtrl.color.hex"></li>
+</ul>
 
-<ol>
-  <li>Display the name of the color</li>
-  <li>Display the hex of the color</li>
-  <li>Display the actual color, using ngStyle</li>
-  <li>Add a "Back" button that returns to the homepage</li>
-</ol>
+<a ng-href="/" class="btn btn-default">Back</a>
