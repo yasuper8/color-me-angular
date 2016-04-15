@@ -45,23 +45,23 @@ var foundObj = [{num:7},{num:2}].find(function(o){
 </details>
 
 **Color Picker**: Add an HTML5 colorpicker (input type 'color') to `colors/show.html`.
-    * Set its initial value to the hex value of the show page.
-    * Stretch: when the user changes their color selection, redirect them to the appropriate show page.
+   * Set its initial value to the hex value of the show page.
+   * Stretch: when the user changes their color selection, redirect them to the appropriate show page.
 
 **Sort the Colors**: Add a [filter](https://docs.angularjs.org/api/ng/filter/filter) to `colors/index.html` that sorts colors by name, alphabetically.
-    * Next, add a button to the index page that, on click...
-        * sorts colors by `name`.
-        * sorts colors by `hex`.
-        * Stretchy Stretch: toggles between ascending/descending sort order with every click.
+   * Next, add a button to the index page that, on click...
+      * sorts colors by `name`.
+      * sorts colors by `hex`.
+      * Stretchy Stretch: toggles between ascending/descending sort order with every click.
 
 ## Resources
 * Built-in Directives
-    - [`ngRepeat`](https://docs.angularjs.org/api/ng/directive/ngRepeat)
-        + [`filter`](https://docs.angularjs.org/api/ng/filter/filter)
-    - [`ngHref`](https://docs.angularjs.org/api/ng/directive/ngHref)
-    - [`ngStyle`](https://docs.angularjs.org/api/ng/directive/ngStyle)
+   - [`ngRepeat`](https://docs.angularjs.org/api/ng/directive/ngRepeat)
+      + [`filter`](https://docs.angularjs.org/api/ng/filter/filter)
+   - [`ngHref`](https://docs.angularjs.org/api/ng/directive/ngHref)
+   - [`ngStyle`](https://docs.angularjs.org/api/ng/directive/ngStyle)
 * [`ngRoute` Module](https://docs.angularjs.org/api/ngRoute)
-    - [`ngView` directive](https://docs.angularjs.org/api/ngRoute/directive/ngView)
-    - [`$routeProvider`](https://docs.angularjs.org/api/ngRoute/provider/$routeProvider)
-    - [`$locationProvider`](https://docs.angularjs.org/api/ng/provider/$locationProvider)
-    - [`$routeParams`](https://docs.angularjs.org/api/ngRoute/service/$routeParams)
+   - [`ngView` directive](https://docs.angularjs.org/api/ngRoute/directive/ngView)
+   - [`$routeProvider`](https://docs.angularjs.org/api/ngRoute/provider/$routeProvider)
+   - [`$locationProvider`](https://docs.angularjs.org/api/ng/provider/$locationProvider)
+   - [`$routeParams`](https://docs.angularjs.org/api/ngRoute/service/$routeParams)
