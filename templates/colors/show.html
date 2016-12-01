@@ -1,10 +1,12 @@
-<h1>Show</h1>
-<p>You are viewing colors/show.html</p>
-<p>Your goal is to:</p>
 
-<ol>
-  <li>Display the name of the color</li>
-  <li>Display the hex of the color</li>
-  <li>Display the actual color, using ngStyle</li>
-  <li>Add a "Back" button that returns to the homepage</li>
-</ol>
+<div class="container text-center" >
+<h1 class='inline-header'>Color Name : <strong>{{colorCtrl.color.name}}</strong></h1>
+<h2 class='inline-header'>Hex : <strong>#{{colorCtrl.color.hex}}</strong></h2>
+<br>
+  <div class="row">
+    <div class="col-md-12" ng-style="{'background-color':'{{colorCtrl.color.name}}', 'height':'20em'}">
+    </div>
+    <a ng-href="/" ng-style="{'text-decoration':'none', 'color':'white'}"><button class='btn' ng-style="{'background-color':'{{colorCtrl.color.name}}', 'margin':'2em'}">Back</button></a>
+  </div>
+</div>
+<!-- <button class='btn' ng-style="{'background-color':'{{colorCtrl.color.name}}'}">Back</button> -->

@@ -27,17 +27,19 @@ function config(   $routeProvider,   $locationProvider  ) {
 }
 
 ColorsIndexController.$inject = [];
-function ColorsIndexController(){
+function ColorsIndexController() {
   this.colors = COLORS;
+
 }
 
 ColorsShowController.$inject = ["$routeParams"];
-function ColorsShowController(   $routeParams   ){
+function ColorsShowController(  $routeParams   ){
   var vm = this;
 
   console.log('$routeParams.index is', $routeParams.index);
 
-  vm.color = COLORS[33];
+  vm.color = COLORS[$routeParams.index];
+
 }
 
 
