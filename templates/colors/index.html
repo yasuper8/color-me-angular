@@ -1,19 +1,20 @@
-<h1>Index</h1>
-<p>You are viewing colors/index.html</p>
-<p>Your goal is to:</p>
 
-<ol>
-  <li>Display all the colors in colorsCtrl.colors, using ngRepeat</li>
-  <li>Link to each individual color show page, using button tags and ngHref</li>
-  <li>Style each button to with the corresponding color, using ngStyle</li>
-</ol>
 
 <div class="container">
-  <div ng-repeat="color in colorsCtrl.colors" class="row">
-    <div class="col-md-12 text-center">
+  <h1>Index</h1>
+  <p>You are viewing colors/index.html</p>
+  <p>Your goal is to:</p>
+
+  <ol>
+    <li>Display all the colors in colorsCtrl.colors, using ngRepeat</li>
+    <li>Link to each individual color show page, using button tags and ngHref</li>
+    <li>Style each button to with the corresponding color, using ngStyle</li>
+  </ol>
+  <div class="row">
+    <div ng-repeat="color in colorsCtrl.colors" class="col-md-4 text-center">
       <div class="col-md-12 color-box" ng-style="{'border':'solid 12px {{color.name}}'}">
           <h4 class='inline-header'>Color Name : <strong>{{color.name}}</strong></h4>
-          <button ng-style="{'background-color':'{{color.name}}'}" class='btn btn-info'  ><a ng-href="/colors/{{$index}}" ng-style="{'text-decoration':'none', 'color':'white'}">{{color.name}}</a></button>
+          <a ng-href="/colors/{{$index}}" ng-style="{'text-decoration':'none', 'color':'white'}"><button ng-style="{'background-color':'{{color.name}}'}" class='btn btn-info'>{{color.name}}</button></a>
       </div>
     </div>
   </div>
